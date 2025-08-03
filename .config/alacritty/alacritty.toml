@@ -1,0 +1,18 @@
+general.import = ["/Users/aniket/.config/alacritty/themes/gruvbox_dark.toml"]
+
+[font]
+size= 13
+
+[font.normal]
+family= "UbuntuMono Nerd Font"
+
+[window]
+decorations = "none"
+
+[window.padding]
+x= 7
+y= 6
+
+[terminal.shell]
+program = "/bin/bash"
+args = ["-l"]
