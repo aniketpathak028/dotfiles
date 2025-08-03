@@ -16,3 +16,7 @@ y= 6
 [terminal.shell]
 program = "/bin/bash"
 args = ["-l"]
+
+[window.dimensions]
+columns= 220
+lines= 60
