@@ -69,6 +69,8 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ~='cd ~'
 alias mkcd='() { mkdir -p "$1" && cd "$1"; }' # Create a dir and cd into it
+alias cls='clear'
+alias v='nvim'
 
 # List aliases
 alias ll='ls -alF'
@@ -96,7 +98,11 @@ alias rzshrc= 'source ~/.zshrc'
 alias p10k='nvim ~/.p10k.zsh'
 alias alac='nvim ~/.config/alacritty/alacritty.toml'
 alias tx='nvim ~/.tmux.conf'
+alias vc='nvim ~/.config/nvim/init.lua'
+alias vcon='cd ~/.config/nvim/'
 alias dot='cd ~/dotfiles'
+alias dsa='cd ~/workspace/dsa/'
+alias portfolio='cd ~/workspace/projects/portfolio/'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

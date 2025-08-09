@@ -25,4 +25,4 @@ args = ["-l"]
 
 [window.dimensions]
 columns= 133
-lines= 40
+lines= 42
