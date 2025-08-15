@@ -1,0 +1,11 @@
+general.import = [
+    "~/.config/alacritty/common.toml",
+    "~/.config/alacritty/themes/gruvbox_material_hard_dark.toml"
+]
+
+[font.normal]
+family = "UbuntuMono Nerd Font"
+
+[terminal.shell]
+program = "/bin/bash"
+args = ["-l"]

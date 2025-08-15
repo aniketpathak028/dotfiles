@@ -23,6 +23,17 @@ path=($^path(N-/))
 export PATH
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+# Alacritty Path Configuration
+# check if running on macOS
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  # Set ALACRITTY_CONFIG_PATH to point to the directory containing your mac.toml
+  export ALACRITTY_CONFIG_PATH="$HOME/dotfiles/alacritty/.config/alacritty/"
+  # Then, create the symlink for Alacritty to find the correct config file.
+  # Ensure the target directory exists first.
+  mkdir -p ~/.config/alacritty/
+  ln -sf ~/dotfiles/alacritty/.config/alacritty/mac.toml ~/.config/alacritty/alacritty.toml
+fi
+
 # Path to Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 

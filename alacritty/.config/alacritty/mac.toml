@@ -1,0 +1,14 @@
+general.import = [
+    "~/.config/alacritty/common.toml",
+    "/Users/aniket/.config/alacritty/themes/gruvbox_material_hard_dark.toml"
+]
+
+[font.normal]
+family = "UbuntuMono Nerd Font"
+
+[window]
+blur = true
+
+[terminal.shell]
+program = "/bin/zsh"
+args = ["-l"]
