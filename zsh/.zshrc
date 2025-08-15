@@ -71,6 +71,8 @@ alias ~='cd ~'
 alias mkcd='() { mkdir -p "$1" && cd "$1"; }' # Create a dir and cd into it
 alias cls='clear'
 alias v='nvim'
+alias vi='nvim'
+alias vim='nvim'
 
 # List aliases
 alias ll='ls -alF'
