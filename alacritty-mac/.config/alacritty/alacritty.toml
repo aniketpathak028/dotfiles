@@ -4,14 +4,14 @@ general.import = ["/Users/aniket/.config/alacritty/themes/gruvbox_material_hard_
 TERM= "xterm-256color"
 
 [font]
-size= 14
+size= 18
 
 [font.normal]
 family= "UbuntuMono Nerd Font"
 
 [window]
 decorations= "None"
-opacity= 0.9
+opacity= 0.8
 blur= true
 option_as_alt = "Both"
 
@@ -25,4 +25,4 @@ args = ["-l"]
 
 [window.dimensions]
 columns= 133
-lines= 42
+lines= 40
