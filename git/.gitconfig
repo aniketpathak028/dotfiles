@@ -1,0 +1,16 @@
+[user]
+    name = Aniket
+    email = aniketpathak028@gmail.com
+
+[init]
+    defaultBranch = main
+
+[core]
+    editor = nvim
+    autocrlf = input 
+
+[pull]
+    rebase = false 
+
+[rebase]
+    autoStash = true 
