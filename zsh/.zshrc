@@ -54,8 +54,8 @@ alias ls="eza --icons=always"
 # Set name of the theme to load.
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# plugins
-plugins=(git)
+# plugins - git, kubectl 
+plugins=(git kubectl-autocomplete)
 
 # Initialize Oh My Zsh
 source $ZSH/oh-my-zsh.sh
@@ -73,6 +73,10 @@ alias cls='clear'
 alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
+
+# k8s
+alias k="kubectl"
+source <(kubectl completion zsh)
 
 # List aliases
 alias ll='ls -alF'
@@ -104,7 +108,17 @@ alias vc='nvim ~/.config/nvim/init.lua'
 alias vcon='cd ~/.config/nvim/'
 alias dot='cd ~/dotfiles'
 alias dsa='cd ~/workspace/dsa/'
-alias portfolio='cd ~/workspace/projects/portfolio/'
+alias pfl='cd ~/REPOS/portfolio/'
+alias zet='cd ~/REPOS/zet/'
+alias hugo='cd ~/workspace/projects/aniketpathak.me/'
+alias sb='cd ~/REPOS/secondbrain/0-Inbox/'
+alias tb='cd ~/REPOS/portfolio/data/articles/'
+alias lab='cd ~/REPOS/homelab/'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/aniket/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

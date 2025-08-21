@@ -14,6 +14,7 @@ decorations= "None"
 opacity= 0.8
 blur= true
 option_as_alt = "Both"
+startup_mode= "Fullscreen"
 
 [window.padding]
 x= 10
