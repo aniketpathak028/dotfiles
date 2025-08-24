@@ -55,6 +55,8 @@ setopt hist_verify
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
+# enable vim mode in zshrc
+bindkey -v
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -78,7 +80,7 @@ source $ZSH/oh-my-zsh.sh
 
 # --- User configuration ---
 
-# Aliases
+# Command aliases
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -90,9 +92,10 @@ alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
 
-# k8s
+# k8s aliases
 alias k="kubectl"
 source <(kubectl completion zsh)
+alias kgp="kubectl get pods"
 
 # List aliases
 alias ll='ls -alF'
@@ -122,6 +125,8 @@ alias alac='nvim ~/.config/alacritty/alacritty.toml'
 alias tx='nvim ~/.tmux.conf'
 alias vc='nvim ~/.config/nvim/init.lua'
 alias vcon='cd ~/.config/nvim/'
+
+# REPOS
 alias dot='cd ~/dotfiles'
 alias dsa='cd ~/workspace/dsa/'
 alias pfl='cd ~/REPOS/portfolio/'
