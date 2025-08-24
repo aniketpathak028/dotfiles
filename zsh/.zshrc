@@ -21,10 +21,26 @@ path=(
 typeset -U path
 path=($^path(N-/))
 export PATH
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/aniket/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
 
 # Path to Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+
+# Set default editor as nvim
+export EDITOR="nvim"
+export VISUAL="nvim"
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 # history setup
 HISTFILE=$HOME/.zhistory
@@ -114,11 +130,3 @@ alias hugo='cd ~/workspace/projects/aniketpathak.me/'
 alias sb='cd ~/REPOS/secondbrain/0-Inbox/'
 alias tb='cd ~/REPOS/portfolio/data/articles/'
 alias lab='cd ~/REPOS/homelab/'
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/aniket/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
