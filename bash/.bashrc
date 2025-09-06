@@ -97,6 +97,13 @@ alias ~='cd ~'
 alias mkcd='() { mkdir -p "$1" && cd "$1"; }' # Create a dir and cd into it
 alias cls='clear'
 alias v='nvim'
+alias vi='nvim'
+alias vim='nvim'
+
+# k8s aliases
+alias k="kubectl"
+# add kubectl completion source
+alias kgp="kubectl get pods"
 
 # List aliases
 alias ll='ls -alF'
@@ -109,8 +116,8 @@ alias gc='git commit -m'       # Commit with a message
 alias gca='git commit -am'     # Add all changes and commit with a message
 alias ga='git add'             # Add specific files
 alias gaa='git add .'          # Add all current directory changes
-alias gp='git push'            # Push to remote
-alias gpl='git pull'           # Pull from remote
+alias gpush='git push'            # Push to remote
+alias gpull='git pull'           # Pull from remote
 alias gl='git log --oneline --decorate --graph --all' # Concise, visual log
 alias gb='git branch'          # List branches
 alias gco='git checkout'       # Checkout branch/commit
@@ -119,13 +126,18 @@ alias gcount='git rev-list --count HEAD' # Count commits
 alias glog='git log --graph --pretty=format:"%C(bold blue)%h%C(reset) %C(bold green)%ad%C(reset) %C(bold yellow)%d%C(reset) %s %C(dim white)- %an%C(reset)" --adj --date=short' # Detailed log
 
 # Config file aliases
-alias bsh='nvim ~/.bashrc'
+alias bashrc='nvim ~/.bashrc'
 alias alac='nvim ~/.config/alacritty/alacritty.toml'
 alias tx='nvim ~/.tmux.conf'
 alias vc='nvim ~/.config/nvim/init.lua'
 alias vcon='cd ~/.config/nvim/'
-alias dot='cd ~/dotfiles'
 
+# REPOS
+alias dot='cd ~/dotfiles'
+alias pfl='cd ~/workspace/portfolio/'
+alias dsa='cd ~/workspace/dsa/'
+alias zet='cd ~/REPOS/zet/'
+alias lab='cd ~/REPOS/homelab/'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -172,3 +184,7 @@ __bash_prompt() {
 }
 __bash_prompt
 export PROMPT_DIRTRIM=4
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
