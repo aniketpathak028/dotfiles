@@ -26,8 +26,8 @@ for notebook in "$SRC_DIR"/*.ipynb; do
   modTime=$(stat -f "%m" "$notebook") # macOs
   # modTime=$(stat -c "%Y" "$notebook") # linux
 
-  if ((modTime > last_run)); then
-    if jupyter nbconvert --to markdown "$notebook" --output-dir "$DEST_DIR" >/dev/null 2>&1; then
+  if ((modTime > last_run)); then 
+    if jupyter nbconvert --to markdown --embed-images "$notebook" --output-dir "$DEST_DIR" >/dev/null 2>&1; then
         echo "✅ converted $base"
     else
         echo "❌ failed to convert $base"
