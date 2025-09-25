@@ -1,0 +1,43 @@
+# !/bin/bash
+
+# variables
+SRC_DIR="/Users/aniket/workspace/dsa"
+DEST_DIR="/Users/aniket/REPOS/zet/content/3-Resources/tech ⚙️/dsa 🧠"
+STATE_FILE="$HOME/.deployDsa"
+
+# check if the dir exists
+mkdir -p "$DEST_DIR"
+
+# read last run timestamp
+if [[ ! -f "$STATE_FILE" ]]; then
+  echo "ℹ️No last run record found -> converting all notebooks..."
+  last_run=0
+else
+  last_run=$(cat "$STATE_FILE")
+fi
+
+# current time
+now=$(date +%s)
+
+# loop through all the ipynb files in source and check if newer than last run
+for notebook in "$SRC_DIR"/*.ipynb; do
+  base=$(basename "$notebook")
+  # notebook modification time
+  modTime=$(stat -f "%m" "$notebook") # macOs
+  # modTime=$(stat -c "%Y" "$notebook") # linux
+
+  if ((modTime > last_run)); then
+    if jupyter nbconvert --to markdown "$notebook" --output-dir "$DEST_DIR" >/dev/null 2>&1; then
+        echo "✅ converted $base"
+    else
+        echo "❌ failed to convert $base"
+    fi
+  else
+    echo "Skipping (no change): $notebook"
+  fi
+done
+
+# update the last run timestamp
+echo "$now" > "$STATE_FILE"
+
+echo "✅ Conversion complete for updated notebooks."
