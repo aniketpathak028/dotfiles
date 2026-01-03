@@ -22,11 +22,8 @@ typeset -U path
 path=($^path(N-/))
 export PATH
 
-
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/aniket/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-
+# custom script path
+export PATH="$HOME/dotfiles/scripts/scripts:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -117,6 +114,13 @@ alias gst='git stash'          # Stash changes
 alias gcount='git rev-list --count HEAD' # Count commits
 alias glog='git log --graph --pretty=format:"%C(bold blue)%h%C(reset) %C(bold green)%ad%C(reset) %C(bold yellow)%d%C(reset) %s %C(dim white)- %an%C(reset)" --adj --date=short' # Detailed log
 
+# Script aliases
+alias ddep="bash $HOME/dotfiles/scripts/scripts/deployDsa"
+
+# python alias
+alias python3="python3.11"
+alias python='python3'
+
 # Config file aliases
 alias zshrc='nvim ~/.zshrc'
 alias rzshrc= 'source ~/.zshrc'
@@ -132,6 +136,14 @@ alias dsa='cd ~/workspace/dsa/'
 alias pfl='cd ~/REPOS/portfolio/'
 alias zet='cd ~/REPOS/zet/'
 alias hugo='cd ~/workspace/projects/aniketpathak.me/'
-alias sb='cd ~/REPOS/secondbrain/0-Inbox/'
+alias sb='cd ~/REPOS/zet/content/0-Index/'
 alias tb='cd ~/REPOS/portfolio/data/articles/'
 alias lab='cd ~/REPOS/homelab/'
+alias learn='cd ~/workspace/learn/'
+alias proj='cd ~/workspace/projects/'
+alias uni='cd ~/workspace/uni/'
+alias german='cd ~/workspace/german/schreiben/'
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/aniket/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
